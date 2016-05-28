@@ -1,5 +1,5 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Something = require('./cats');
-console.log('Here in main '+Something);
-ReactDOM.render(<Something />,document.getElementById('somethingdiv'));
+var Heading = require('./heading');
+var heading = (<Heading value="My heading" />);
+ReactDOM.render(<div>{heading}</div>,document.getElementById('somethingdiv'));

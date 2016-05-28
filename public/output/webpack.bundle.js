@@ -48,9 +48,13 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(38);
-	var Something = __webpack_require__(168);
-	console.log('Here in main ' + Something);
-	ReactDOM.render(React.createElement(Something, null), document.getElementById('somethingdiv'));
+	var Heading = __webpack_require__(169);
+	var heading = React.createElement(Heading, { value: 'My heading' });
+	ReactDOM.render(React.createElement(
+	  'div',
+	  null,
+	  heading
+	), document.getElementById('somethingdiv'));
 
 /***/ },
 /* 1 */
@@ -20321,23 +20325,23 @@
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-/* 168 */
+/* 168 */,
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var cats = ['john', 'amy', 'sdsds'];
 	var React = __webpack_require__(1);
-	var Something = React.createClass({
-		displayName: 'Something',
+	var Heading = React.createClass({
+		displayName: 'Heading',
 		render: function render() {
 			return React.createElement(
 				'h1',
 				null,
-				'here dfdf '
+				this.props.value
 			);
 		} });
-	module.exports = Something;
+	module.exports = Heading;
 
 /***/ }
 /******/ ]);
